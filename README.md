@@ -20,6 +20,8 @@ Why this dependency is described by the following equation?
 
 `P(same spin) = sin²(θ/2)`
 
+![alt text](./img/probability.png)
+
 ### 1. Entangled Singlet State
 Singlet state is anti-symmetric and in Dirac notation  it has the following representation:
 ```
