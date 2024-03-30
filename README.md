@@ -1,6 +1,4 @@
-
-
-## Problem description
+## Glossary
 
 `Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
 
@@ -14,24 +12,56 @@
 
 `Entangled Singlet State`: The entangled state of the two electrons is represented by the singlet state. This state has an interesting property: if you measure the spin of one electron, you instantly know the spin of the other (with opposite direction).
 
+`Spin Angular Momentum (S)`: An intrinsic property of particles, independent of their spatial motion. It's like a particle spinning around its own axis. 
+
+`Spin operator`: describes the spin angular momentum of a particle. Such an operator is applied to a mathematical representation of the physical state of a system and yields an angular momentum value if the state has a definite value for it.
+
+`Spin Rotation operator R(θ)`: It represents a rotation of the spin state of the particle by an angle θ about an axis in the x-y plane. This rotation doesn't change the overall magnitude of the spin, but it changes its orientation in space. The specific form of R(θ) follows from the general principles of how rotations are represented in quantum mechanics. For spin-1/2 systems, 2x2 matrices act on the two-dimensional state vector.
+
+`Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
+
+## Problem description
+
 We consider a maximally entangled pair of electrons. The probability of finding both particles from a singlet with the same spin depends on the angle between measurement settings.
 
 Why this dependency is described by the following equation?
 
-`P(same spin) = sin²(θ/2)`
+`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
 
 ![alt text](./img/probability.png)
 
 ### 1. Entangled Singlet State
-Singlet state is anti-symmetric and in Dirac notation  it has the following representation:
+
+Electrons are fermions, which means they obey the Pauli Exclusion Principle. This fundamental principle states that no two identical fermions can occupy the same quantum state simultaneously.
+
+The quantum state of a particle encompasses not only its position but also intrinsic properties like spin.  So, two electrons cannot be in the same location and have the same spin state.
+
+The Pauli Exclusion Principle translates into a mathematical requirement for the wavefunction describing a system of fermions: it must be antisymmetric under the exchange of particles.
+
+Each electron in our system can exist in a superposition of spin-up (`|↑⟩`) and spin-down (`|↓⟩`) states. For two electrons, the possible combined states are:
+
+- `|↑₁⟩|↑₂⟩` (Both spin-up)
+- `|↑₁⟩|↓₂⟩` (Electron 1 spin-up, Electron 2 spin-down)
+- `|↓₁⟩|↑₂⟩` (Electron 1 spin-down, Electron 2 spin-up)
+- `|↓₁⟩|↓₂⟩` (Both spin-down)
+
+The singlet state is defined by having a total spin of zero. Because electron spins have values of 1/2,  the only way to combine their spins to get zero is if they're in opposite states. This eliminates the first and last possibilities from the list above.
+
+The quantum state of a singlet is antisymmetric under exchange. What does "antisymmetric under exchange" mean? If you swap the labels of the two electrons (1 and 2) in the wavefunction, the wavefunction changes its sign.
+
+Now, we need to combine the remaining two possible states in a way that makes the wavefunction antisymmetric:
+
+- If we simply add them, the wavefunction is symmetric: `|↑₁⟩|↓₂⟩` + `|↓₁⟩|↑₂⟩` (Doesn't change sign if we swap 1 and 2)
+- To make it antisymmetric, we subtract them: `|↑₁⟩|↓₂⟩` - `|↓₁⟩|↑₂⟩`.  Now, swapping the electron labels changes the sign of the wavefunction.
+
+The only way to construct a valid wavefunction with opposite spins and satisfy the antisymmetry requirement is by making a linear combination where the two possible configurations have opposite signs.
+
+Finally, in Dirac notation the state has the following representation:
 ```
-|Ψ⟩ = (1/√2) ( |↑⟩₁|↓⟩₂ -  |↓⟩₁|↑⟩₂)
+|Ψ⟩ = (1/√2) ( |↑₁⟩|↓₂⟩ -  |↓₁⟩|↑₂⟩)
 ```
+
 ### 2. Rotated Spin Measurement
-
-`Spin Angular Momentum (S)`: An intrinsic property of particles, independent of their spatial motion. It's like a particle spinning around its own axis. 
-
-`Spin operator`: describes the spin angular momentum of a particle. Such an operator is applied to a mathematical representation of the physical state of a system and yields an angular momentum value if the state has a definite value for it.
 
 Unlike in more complicated quantum mechanical systems, the spin of a spin-1/2 particle can be expressed as a linear combination of just two eigenstates, or eigenspinors. These are traditionally labeled spin up and spin down.
 
@@ -50,9 +80,6 @@ Sz = (ħ/2)σz = (ħ/2) * ( [1  0]
 Sₓ = (ħ/2)σx = (ħ/2) * ( [0  1]
                          [1  0] )
 ```
-`Spin Rotation operator R(θ)`: It represents a rotation of the spin state of the particle by an angle θ about an axis in the x-y plane. This rotation doesn't change the overall magnitude of the spin, but it changes its orientation in space. The specific form of R(θ) follows from the general principles of how rotations are represented in quantum mechanics. For spin-1/2 systems, 2x2 matrices act on the two-dimensional state vector.
-
-`Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
 #### Rotation Operator (in the x-y plane)
 
@@ -93,8 +120,8 @@ R(θ) =  [ cos(θ/2) -sin(θ/2) ]
 ```
 Sθ = R(θ) Sz R⁻¹(θ) 
 
-Sθ =  (ħ/2) * [ cos(θ)  sin(θ) ]
-              [ sin(θ) -cos(θ) ]
+Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
+              [ sin(θ/2) -cos(θ/2) ]
 ```
 #### d) Eigenstates of Sθ
 ```
@@ -107,25 +134,24 @@ Sθ =  (ħ/2) * [ cos(θ)  sin(θ) ]
 
 ### 3. Probability of 'Up-Up' Result
 ```
-P(up-up) = |⟨↑(θ)₁ ⊗ ↑₂ |Ψ⟩|² 
+P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
 ```
 ### 4. Tensor product of individual states
 Individual states of particles `1` and `2`:
 ```
-|↑(θ)⟩₁ = cos(θ/2)|↑⟩₁ + sin(θ/2)|↓⟩₁
+|↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
 
-|↑⟩₂ = 1 |↑⟩₂ + 0|↓⟩₂ (it's already an eigenstate of Sz)
+|↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩ (it's already an eigenstate of Sz)
 ```
+
+
 ```
-I. ⟨↑(θ)₁ ⊗ ↑₂ = ⟨(cos(θ/2)|↑⟩₁ + sin(θ/2)|↓⟩₁) ⊗ (1 |↑⟩₂ + 0|↓⟩₂)
+I. ⟨↑₁(θ) ⊗ ↑₂ = ⟨(cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩) ⊗ (1 |↑₂⟩ + 0|↓₂⟩)
 
-II. ⟨↑(θ)₁ ⊗ ↑₂ = cos(θ/2) ⟨↑₁ ⊗ |↑⟩₂  + sin(θ/2) ⟨↓₁ ⊗ |↑⟩₂
+II. ⟨↑₁(θ) ⊗ ↑₂ = cos(θ/2) ⟨↑₁ ⊗ |↑₂⟩  + sin(θ/2) ⟨↓₁ ⊗ |↑₂⟩
 
-III. ⟨↑(θ)₁ ⊗ ↑₂ = cos(θ/2) |↑⟩₁|↑⟩₂ + sin(θ/2) |↓⟩₁|↑⟩₂
+III. ⟨↑(θ)₁ ⊗ ↑₂ = cos(θ/2) |↑₁⟩|↑₂⟩ + sin(θ/2) |↓₁⟩|↑₂⟩
 
-IV. ⟨↑(θ)₁ ⊗ ↑₂ = 1/√2 (cos(θ/2)₁ sin(θ/2)₂)
-
-TODO how do we get from III to IV?
 ```
 ### 5. P(up-up) continue (3 + 4)
 Useful trigonometric identity:
