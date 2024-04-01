@@ -1,4 +1,4 @@
 ```
-mambe env create -f visualization/environment.yml
+mamba env create -f visualization/environment.yml
 conda activate quantum_entanglement
 ```

@@ -1,12 +1,18 @@
 import sys
 import vtk
 
-plane_length = 8
-measurement_plane_length = 2.5
-plane_half_length = plane_length / 2
-particle_1_center = (-1.5, 0, 0)
-particle_2_center = (1.5, 0, 0)
-static_scene = True
+from common.constants import (
+    plane_half_length,
+    particle_1_center,
+    particle_2_center
+)
+from common.functions import (
+    get_arrow,
+    get_measurement_plane,
+    is_spin_up
+)
+
+static_scene = False
 
 def get_sphere(center: tuple[float, float, float], radius: float) -> vtk.vtkActor:
     sphere = vtk.vtkSphereSource()
@@ -18,58 +24,6 @@ def get_sphere(center: tuple[float, float, float], radius: float) -> vtk.vtkActo
     sphere_actor.GetProperty().SetOpacity(0.1)
     sphere_actor.SetMapper(mapper)
     return sphere_actor
-
-
-def get_arrow(
-        center: tuple[float, float, float],
-        spin_alpha_degree: float = 0,
-        spin_theta_degree: float = 0
-    ) -> vtk.vtkActor:
-    arrow_source = vtk.vtkArrowSource()
-    arrow_source.SetTipLength(0.3)  # Adjust arrow size 
-    arrow_source.SetShaftRadius(0.05)  # Adjust arrow size
-    mapper = vtk.vtkPolyDataMapper()
-    mapper.SetInputConnection(arrow_source.GetOutputPort())
-    arrow_actor = vtk.vtkActor()
-    arrow_actor.SetMapper(mapper)
-    arrow_actor.SetPosition(center)
-    # rotate based on args
-    arrow_actor.RotateX(spin_alpha_degree)
-    arrow_actor.RotateZ(spin_theta_degree)
-    return arrow_actor
-
-
-def get_measurement_plane(
-        center: tuple[float, float, float],
-        xz_degree: float = 0
-    ) -> vtk.vtkActor:
-    plane_source = vtk.vtkPlaneSource()
-    measurement_plane_length_half = measurement_plane_length/2
-    plane_source.SetOrigin(
-        center[0] - measurement_plane_length_half,
-        center[1] - measurement_plane_length_half,
-        0
-    )
-    plane_source.SetPoint1(
-        center[0] + measurement_plane_length_half,
-        center[1] - measurement_plane_length_half,
-        0
-    )
-    plane_source.SetPoint2(
-        center[0] - measurement_plane_length_half,
-        center[1] + measurement_plane_length_half,
-        0
-    )
-    plane_source.SetXResolution(10)
-    plane_source.SetYResolution(10)
-    plane_source.Rotate(xz_degree, (0, 1, 0))
-    mapper = vtk.vtkPolyDataMapper()
-    mapper.SetInputConnection(plane_source.GetOutputPort())
-    plane_actor = vtk.vtkActor()
-    plane_actor.SetMapper(mapper)
-    plane_actor.GetProperty().SetColor(0, 0, 0.8)
-    plane_actor.GetProperty().SetOpacity(0.5)
-    return plane_actor
 
 
 def get_plane() -> vtk.vtkActor:
@@ -124,9 +78,11 @@ class ArrowInteractorStyle(vtk.vtkInteractorStyleTrackballActor):
         print(self.click_position)
 
 
+
 def draw(
     spin_alpha_degree: float = 0,
-    spin_theta_degree: float = 0
+    spin_theta_degree: float = 0,
+    measurement_angle: float = 0
 ):
     # create render window
     render_window = vtk.vtkRenderWindow()
@@ -146,30 +102,55 @@ def draw(
     sphere_radius = 1
     sphere1 = get_sphere(center=particle_1_center, radius=sphere_radius)
     sphere2 = get_sphere(center=particle_2_center, radius=sphere_radius)
-    arrow1 = get_arrow(
+    arrow_first, arrow_first_tip_coords = get_arrow(
         center=particle_1_center,
         spin_alpha_degree=spin_alpha_degree,
         spin_theta_degree=spin_theta_degree
     )
-    arrow2 = get_arrow(
+    arrow_second, arrow_second_tip_coords = get_arrow(
         center=particle_2_center,
         spin_alpha_degree=spin_alpha_degree,
-        spin_theta_degree=spin_theta_degree
+        spin_theta_degree=spin_theta_degree,
+        rotate_z=True
     )
-    arrow2.RotateZ(180)  # Opposite orientation for singlet representation
+    print(f'Particle 1 center: {particle_1_center}')
+    print(f'Particle 2 center: {particle_2_center}')
+    print(f'Particle 1 tip coords: {arrow_first_tip_coords}')
+    print(f'Particle 2 tip coords: {arrow_second_tip_coords}')
     plane_actor = get_plane()
     grid_actor = get_grid()
-    measurment_place_particle_1 = get_measurement_plane(center=particle_1_center)
-    measurment_place_particle_2 = get_measurement_plane(center=particle_2_center, xz_degree=30)
+    measurement_plane_first, measurement_plane_first_coefficients = get_measurement_plane(
+        center=particle_1_center
+    )
+    measurement_plane_second, measurement_plane_second_coefficients = get_measurement_plane(
+        center=particle_2_center, xz_degree=measurement_angle
+    )
+
+    if is_spin_up(
+        tip_coords=arrow_first_tip_coords,
+        measurement_plane_coefficients=measurement_plane_first_coefficients
+    ):
+        arrow_first.GetProperty().SetColor(1.0, 0.0, 0.0)
+    else:
+        arrow_first.GetProperty().SetColor(0.0, 0.0, 1.0)
+
+    if is_spin_up(
+        tip_coords=arrow_second_tip_coords,
+        measurement_plane_coefficients=measurement_plane_second_coefficients
+    ):
+        arrow_second.GetProperty().SetColor(1.0, 0.0, 0.0)
+    else:
+        arrow_second.GetProperty().SetColor(0.0, 0.0, 1.0)
+
     # add actors
     renderer.AddActor(sphere1)
     renderer.AddActor(sphere2)
-    renderer.AddActor(arrow1)
-    renderer.AddActor(arrow2)
+    renderer.AddActor(arrow_first)
+    renderer.AddActor(arrow_second)
     renderer.AddActor(plane_actor)
     renderer.AddActor(grid_actor)
-    renderer.AddActor(measurment_place_particle_1)
-    renderer.AddActor(measurment_place_particle_2)
+    renderer.AddActor(measurement_plane_first)
+    renderer.AddActor(measurement_plane_second)
     renderer.SetBackground(0.2, 0.2, 0.2)
     # Set camera position
     camera = renderer.GetActiveCamera()
@@ -183,7 +164,11 @@ def draw(
 if __name__ == '__main__':
     spin_alpha_degree = float(sys.argv[1]) if len(sys.argv) > 1 else 0
     spin_theta_degree = float(sys.argv[2]) if len(sys.argv) > 2 else 0
+    measurement_angle = float(sys.argv[3]) if len(sys.argv) > 3 else 0
+    print(f'Alpha = {spin_alpha_degree}')
+    print(f'Theta = {spin_theta_degree}')   
     draw(
         spin_alpha_degree=spin_alpha_degree,
-        spin_theta_degree=spin_theta_degree
+        spin_theta_degree=spin_theta_degree,
+        measurement_angle=measurement_angle
     )
