@@ -1,6 +1,6 @@
 import vtk
 
-from common.constants import measurement_plane_length
+from common.constants import MEASUREMENT_PLANE_LENGTH
 
 
 def is_spin_up(
@@ -15,7 +15,7 @@ def is_spin_up(
 def get_arrow(
         center: tuple[float, float, float],
         spin_alpha_degree: float = 0,
-        spin_theta_degree: float = 0,
+        spin_theta_degree: float | None = None,
         rotate_z: bool = False
     ) -> tuple[vtk.vtkActor, tuple[float, float, float]]:
     arrow_source = vtk.vtkArrowSource()
@@ -31,8 +31,12 @@ def get_arrow(
     # Create a transform to apply the rotations
     transform = vtk.vtkTransform()
     transform.Translate(center)
-    transform.RotateX(spin_alpha_degree)
-    transform.RotateZ(spin_theta_degree)
+
+    if spin_theta_degree is None:
+        transform.RotateWXYZ(spin_alpha_degree, 0, 1, 0)
+    else:
+        transform.RotateX(spin_alpha_degree)
+        transform.RotateZ(spin_theta_degree)
 
     if rotate_z:
         transform.RotateZ(180)
@@ -56,7 +60,7 @@ def get_measurement_plane(
         xz_degree: float = 0
     ) -> tuple[vtk.vtkActor, tuple[float, float, float, float]]:
     plane_source = vtk.vtkPlaneSource()
-    measurement_plane_length_half = measurement_plane_length/2
+    measurement_plane_length_half = MEASUREMENT_PLANE_LENGTH/2
     plane_source.SetOrigin(
         center[0] - measurement_plane_length_half,
         center[1] - measurement_plane_length_half,

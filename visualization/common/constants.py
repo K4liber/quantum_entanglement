@@ -1,5 +1,6 @@
-plane_length = 8
-measurement_plane_length = 2.5
-plane_half_length = plane_length / 2
-particle_1_center = (-1.5, 0, 0)
-particle_2_center = (1.5, 0, 0)
+PLANE_LENGTH = 8
+MEASUREMENT_PLANE_LENGTH = 2.5
+PLANE_LENGTH_HALF = PLANE_LENGTH / 2
+PARTICLE_1_CENTER = (-1.5, 0, 0)
+PARTICLE_2_CENTER = (1.5, 0, 0)
+DO_2D_ROTATION = True

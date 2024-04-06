@@ -179,3 +179,21 @@ II. P(same spin) = 1/4 * sin²(θ)
 
 TODO why we end up with max(P(same spin)) == 1/4 ? It should be equal to 1 for 180 degrees.
 ```
+
+### 7. Intepretation
+
+Our physical world is at least four-dimensional (3D space + 1D time, + maybe more) Mandelbrot set like. It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the not locality of the reality coming from the quantum mechanics theory, the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works.
+
+Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
+
+### 8. Bibliography
+
+1. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
+
+2. "CHSH (Clauser-Horne-Shimony-Holt) inequality", 1969, https://en.wikipedia.org/wiki/CHSH_inequality
+
+3. "Bell's theorem", John Stewart Bell, 1964,  https://en.wikipedia.org/wiki/Bell%27s_theorem
+
+4. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
+
+5. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
