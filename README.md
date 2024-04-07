@@ -1,4 +1,18 @@
-## Glossary
+## 1. Problem description
+
+What is an example of a simple quantum experiment that disagree with a classical intuition implying local realism?
+
+Such an experiment could be CHSH game[1].
+
+We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
+
+Why this dependency is described by the following equation?
+
+`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
+
+![alt text](./img/probability.png)
+
+## 2. Glossary
 
 `Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
 
@@ -20,17 +34,9 @@
 
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
-## Problem description
+## 3. CHSH game optimal strategy derivation
 
-We consider a maximally entangled pair of electrons. The probability of finding both particles from a singlet with the same spin depends on the angle between measurement settings.
-
-Why this dependency is described by the following equation?
-
-`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
-
-![alt text](./img/probability.png)
-
-### 1. Entangled Singlet State
+### Entangled Singlet State
 
 Electrons are fermions, which means they obey the Pauli Exclusion Principle. This fundamental principle states that no two identical fermions can occupy the same quantum state simultaneously.
 
@@ -61,7 +67,7 @@ Finally, in Dirac notation the state has the following representation:
 |Ψ⟩ = (1/√2) ( |↑₁⟩|↓₂⟩ -  |↓₁⟩|↑₂⟩)
 ```
 
-### 2. Rotated Spin Measurement
+### Rotated Spin Measurement
 
 Unlike in more complicated quantum mechanical systems, the spin of a spin-1/2 particle can be expressed as a linear combination of just two eigenstates, or eigenspinors. These are traditionally labeled spin up and spin down.
 
@@ -116,14 +122,14 @@ R(θ) =  [ cos(θ/2) -sin(θ/2) ]
         [ sin(θ/2)  cos(θ/2) ]
 ```
 
-#### c) Spin Operator Along Rotated Axis (Sθ)
+#### Spin Operator Along Rotated Axis (Sθ)
 ```
 Sθ = R(θ) Sz R⁻¹(θ) 
 
 Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
               [ sin(θ/2) -cos(θ/2) ]
 ```
-#### d) Eigenstates of Sθ
+#### Eigenstates of Sθ
 ```
 |↑(θ)⟩ = [ cos(θ/2) ]
          [ sin(θ/2) ]
@@ -132,65 +138,53 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
          [ cos(θ/2) ]  
 ```
 
-### 3. Probability of 'Up-Up' Result
+### Probability of 'Up-Up' Result
 ```
 P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
 ```
-### 4. Tensor product of individual states
+### Tensor product of individual states
 Individual states of particles `1` and `2`:
 ```
 |↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
 
-|↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩ (it's already an eigenstate of Sz)
-```
-
-
-```
-I. ⟨↑₁(θ) ⊗ ↑₂ = ⟨(cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩) ⊗ (1 |↑₂⟩ + 0|↓₂⟩)
-
-II. ⟨↑₁(θ) ⊗ ↑₂ = cos(θ/2) ⟨↑₁ ⊗ |↑₂⟩  + sin(θ/2) ⟨↓₁ ⊗ |↑₂⟩
-
-III. ⟨↑(θ)₁ ⊗ ↑₂ = cos(θ/2) |↑₁⟩|↑₂⟩ + sin(θ/2) |↓₁⟩|↑₂⟩
-
-```
-### 5. P(up-up) continue (3 + 4)
-Useful trigonometric identity:
-```
-sin(2x) = 2sin(x)cos(x)
+|↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩
 ```
 
 ```
-I. P(up-up) = | 1/√2 (cos(θ/2)₁ sin(θ/2)₂)( |↑⟩₁|↓⟩₂ -  |↓⟩₁|↑⟩₂ )|²
-
-II. P(up-up) = |1/√2 (cos(θ/2)sin(θ/2)⟨↑₁|↑⟩₁⟨↓₂|↓⟩₂ - cos(θ/2)sin(θ/2)⟨↑₁|↓⟩₁⟨↓₂|↑⟩₂) |²
-
-III. P(up-up) =  1/2 * cos²(θ/2)sin²(θ/2)
-
-IV. P(up-up) =  1/2 * 1/4 * (2cos(θ/2)sin(θ/2))²
-
-V. P(up-up) =  1/8 * sin²(θ)
-
-```
-### 6. P(same spin)
-```
-I. P(same spin) = P(up-up) + P(down-down) = 2 * 1/8 * sin²(θ)
-
-II. P(same spin) = 1/4 * sin²(θ)
-
-TODO why we end up with max(P(same spin)) == 1/4 ? It should be equal to 1 for 180 degrees.
+⟨↑₁(θ)| ⊗ ⟨↑₂|
 ```
 
-### 7. Intepretation
+### P(up-up)
+```
+I. P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
+
+II. ... TODO step by step calculations
+```
+Finally:
+```
+
+P(up-up) =  1/2 * sin²(θ)
+
+```
+### P(same spin)
+```
+I. P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
+
+II. P(same spin) = sin²(θ)
+
+```
+
+## 4. Intepretation
 
 Our physical world is at least four-dimensional (3D space + 1D time, + maybe more) Mandelbrot set like. It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the not locality of the reality coming from the quantum mechanics theory, the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works.
 
 Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
 
-### 8. Bibliography
+## 5. Bibliography
 
-1. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
+1. "CHSH (Clauser-Horne-Shimony-Holt) game", 1969, https://en.wikipedia.org/wiki/CHSH_inequality#CHSH_game
 
-2. "CHSH (Clauser-Horne-Shimony-Holt) inequality", 1969, https://en.wikipedia.org/wiki/CHSH_inequality
+2. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
 
 3. "Bell's theorem", John Stewart Bell, 1964,  https://en.wikipedia.org/wiki/Bell%27s_theorem
 
