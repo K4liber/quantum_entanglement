@@ -1,2 +1,3 @@
 visualization/results.csv
 **/__pycache__/**
+.vscode/*

@@ -2,9 +2,9 @@ import sys
 import vtk
 
 from common.constants import (
-    plane_half_length,
-    particle_1_center,
-    particle_2_center
+    PLANE_LENGTH_HALF,
+    PARTICLE_1_CENTER,
+    PARTICLE_2_CENTER
 )
 from common.functions import (
     get_arrow,
@@ -28,9 +28,9 @@ def get_sphere(center: tuple[float, float, float], radius: float) -> vtk.vtkActo
 
 def get_plane() -> vtk.vtkActor:
     plane_source = vtk.vtkPlaneSource()
-    plane_source.SetOrigin(-plane_half_length, -plane_half_length, 0)
-    plane_source.SetPoint1(plane_half_length, -plane_half_length, 0)
-    plane_source.SetPoint2(-plane_half_length, plane_half_length, 0)
+    plane_source.SetOrigin(-PLANE_LENGTH_HALF, -PLANE_LENGTH_HALF, 0)
+    plane_source.SetPoint1(PLANE_LENGTH_HALF, -PLANE_LENGTH_HALF, 0)
+    plane_source.SetPoint2(-PLANE_LENGTH_HALF, PLANE_LENGTH_HALF, 0)
     plane_source.SetXResolution(10)
     plane_source.SetYResolution(10)
     mapper = vtk.vtkPolyDataMapper()
@@ -44,7 +44,7 @@ def get_plane() -> vtk.vtkActor:
 
 def get_grid() -> vtk.vtkAxesActor:
     transform = vtk.vtkTransform()
-    transform.Translate(-plane_half_length, -plane_half_length, 0)
+    transform.Translate(-PLANE_LENGTH_HALF, -PLANE_LENGTH_HALF, 0)
     grid = vtk.vtkAxesActor()
     grid.SetUserTransform(transform)
     grid.SetXAxisLabelText("X")
@@ -100,30 +100,30 @@ def draw(
     render_window.AddRenderer(renderer)
     # create actors
     sphere_radius = 1
-    sphere1 = get_sphere(center=particle_1_center, radius=sphere_radius)
-    sphere2 = get_sphere(center=particle_2_center, radius=sphere_radius)
+    sphere1 = get_sphere(center=PARTICLE_1_CENTER, radius=sphere_radius)
+    sphere2 = get_sphere(center=PARTICLE_2_CENTER, radius=sphere_radius)
     arrow_first, arrow_first_tip_coords = get_arrow(
-        center=particle_1_center,
+        center=PARTICLE_1_CENTER,
         spin_alpha_degree=spin_alpha_degree,
         spin_theta_degree=spin_theta_degree
     )
     arrow_second, arrow_second_tip_coords = get_arrow(
-        center=particle_2_center,
+        center=PARTICLE_2_CENTER,
         spin_alpha_degree=spin_alpha_degree,
         spin_theta_degree=spin_theta_degree,
         rotate_z=True
     )
-    print(f'Particle 1 center: {particle_1_center}')
-    print(f'Particle 2 center: {particle_2_center}')
+    print(f'Particle 1 center: {PARTICLE_1_CENTER}')
+    print(f'Particle 2 center: {PARTICLE_2_CENTER}')
     print(f'Particle 1 tip coords: {arrow_first_tip_coords}')
     print(f'Particle 2 tip coords: {arrow_second_tip_coords}')
     plane_actor = get_plane()
     grid_actor = get_grid()
     measurement_plane_first, measurement_plane_first_coefficients = get_measurement_plane(
-        center=particle_1_center
+        center=PARTICLE_1_CENTER
     )
     measurement_plane_second, measurement_plane_second_coefficients = get_measurement_plane(
-        center=particle_2_center, xz_degree=measurement_angle
+        center=PARTICLE_2_CENTER, xz_degree=measurement_angle
     )
 
     if is_spin_up(
