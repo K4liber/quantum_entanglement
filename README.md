@@ -142,23 +142,21 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
 ```
 P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
 ```
-### Tensor product of individual states
-Individual states of particles `1` and `2`:
+### Individual states of particles
 ```
 |↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
 
 |↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩
 ```
 
-```
-⟨↑₁(θ)| ⊗ ⟨↑₂|
-```
 
 ### P(up-up)
 ```
-I. P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
+P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
 
-II. ... TODO step by step calculations
+
+
+... TODO step by step calculations
 ```
 Finally:
 ```
@@ -168,9 +166,9 @@ P(up-up) =  1/2 * sin²(θ)
 ```
 ### P(same spin)
 ```
-I. P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
+P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
 
-II. P(same spin) = sin²(θ)
+P(same spin) = sin²(θ)
 
 ```
 
