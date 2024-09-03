@@ -1,18 +1,20 @@
-## 1. Problem description
+## 1. Problem definition
 
 What is an example of a simple quantum experiment that disagree with a classical intuition implying local realism?
 
 Such an experiment could be CHSH game[1].
 
-We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
+But let's start with a recall of crucial concepts related to the topic. 
 
-Why this dependency is described by the following equation?
+## 2. Concepts
 
-`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
+`Locality`: an object is influenced directly only by its immediate surroundings.
 
-![alt text](./img/probability.png)
+`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known.
 
-## 2. Glossary
+`Determinism`: the philosophical belief that all events, including moral choices, are determined completely by previously existing causes. In a deterministic system, given a specific set of initial conditions and laws of nature, the outcome can be predicted with certainty.
+
+`Superdeterminism`: 
 
 `Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
 
@@ -35,6 +37,14 @@ Why this dependency is described by the following equation?
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
 ## 3. CHSH game optimal strategy derivation
+
+We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
+
+Why this dependency is described by the following equation?
+
+`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
+
+![alt text](./img/probability.png)
 
 ### Entangled Singlet State
 
@@ -191,3 +201,5 @@ Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.or
 4. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
 
 5. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
+
+6. "Interpretations of quantum mechanics", wikipedia, https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
