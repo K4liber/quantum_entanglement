@@ -1,20 +1,33 @@
-## 1. Problem definition
+# The future already happened
 
-What is an example of a simple quantum experiment that disagree with a classical intuition implying local realism?
+## 1. Abstract
 
-Such an experiment could be CHSH game[1].
+Our physical world is like Mandelbrot set (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works. Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
 
-But let's start with a recall of crucial concepts related to the topic. 
+![alt text](./img/mandelbrot.jpg)
+Fig.1 Mandelbrot set visualization.
 
-## 2. Concepts
+Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell describe the concept of superdeterminism well:
 
-`Locality`: an object is influenced directly only by its immediate surroundings.
+“There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
 
-`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known.
+## 2. Theoretical introduction
+
+The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
+
+- locality
+- realism
+- any free will
+
+Such an experiment could be CHSH game[1]. Before describing the experiment, let's start with a recall of crucial concepts related to the topic. 
+
+`Locality`: an object is influenced directly only by its immediate surroundings. Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
+
+`Realism`: objects which accord with the principle of realism have defined properties independent of our measurements. The universe exists external to our minds and exists whether or not we observe or measure it.
 
 `Determinism`: the philosophical belief that all events, including moral choices, are determined completely by previously existing causes. In a deterministic system, given a specific set of initial conditions and laws of nature, the outcome can be predicted with certainty.
 
-`Superdeterminism`: 
+`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known. Randomness, also known as indeterminism, is the opposite of determinism.
 
 `Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
 
@@ -184,11 +197,9 @@ II. P(same spin) = sin²(θ)
 
 ```
 
-## 4. Intepretation
+## 4. Conclusions
 
-Our physical world is at least four-dimensional (3D space + 1D time, + maybe more) Mandelbrot set like. It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the not locality of the reality coming from the quantum mechanics theory, the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works.
-
-Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
+TODO
 
 ## 5. Bibliography
 
