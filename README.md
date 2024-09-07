@@ -229,3 +229,5 @@ Since the reality is calculated up front, there is no place for a free-will. The
 , https://www.youtube.com/watch?v=RlXdsyctD50
 
 10. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
+
+11. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
