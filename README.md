@@ -2,9 +2,7 @@
 
 ## 1. Abstract
 
-What is an example of a simple quantum experiment that disagree with a classical understanding of the universe? Such an experiment could be CHSH game[1].
-
-TODO continue about what mystery we are trying to solve ...
+I am surprised that any scientist can accept the fact that some event can be fundamentally random. Accepting randomness does not sound scientific. The most widely accepted interpretation of quantum mechanics seems to be the Copenhagen one. The Copenhagen interpretation of quantum mechanics tells us that when we do a mesurement, the wave function collapse is totally random. Let's discuss a simple quantum experiment and understand why we try to hide quantum mechanics mystery under the fundamental randomness. Such an experiment could be CHSH game[1].
 
 ## 2. Theoretical introduction
 
