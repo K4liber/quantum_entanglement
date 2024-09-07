@@ -227,3 +227,5 @@ Since the reality is calculated up front, there is no place for a free-will. The
 
 9. "Pilot Wave Theory and Quantum Realism", PBS Space Time
 , https://www.youtube.com/watch?v=RlXdsyctD50
+
+10. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
