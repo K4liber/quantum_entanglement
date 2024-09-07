@@ -1,31 +1,22 @@
-# The future already happened
+# Solving quantum mechanics mystery
 
 ## 1. Abstract
 
-Our physical world is like Mandelbrot set (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works. Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
+What is an example of a simple quantum experiment that disagree with a classical understanding of the universe? Such an experiment could be CHSH game[1].
 
-![alt text](./img/mandelbrot.jpg)
-Fig.1 Mandelbrot set visualization.
-
-Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell describe the concept of superdeterminism well:
-
-“There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
+TODO continue about what mystery we are trying to solve ...
 
 ## 2. Theoretical introduction
 
-The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
-
-- locality
-- realism
-- any free will
-
-Such an experiment could be CHSH game[1]. Before describing the experiment, let's start with a recall of crucial concepts related to the topic. 
+Before describing the CHSH game, let's start with a recall of crucial concepts related to the topic. 
 
 `Locality`: an object is influenced directly only by its immediate surroundings. Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
 
 `Realism`: objects which accord with the principle of realism have defined properties independent of our measurements. The universe exists external to our minds and exists whether or not we observe or measure it.
 
 `Determinism`: the philosophical belief that all events, including moral choices, are determined completely by previously existing causes. In a deterministic system, given a specific set of initial conditions and laws of nature, the outcome can be predicted with certainty.
+
+`Superdeterminism`: in addition to being deterministic, superdeterministic models also postulate correlations between the state that is measured and the measurement setting.
 
 `Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known. Randomness, also known as indeterminism, is the opposite of determinism.
 
@@ -49,6 +40,16 @@ Such an experiment could be CHSH game[1]. Before describing the experiment, let'
 
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
+TODO show results with images from 3D visualization
+
+![alt text](./img/probability.png)
+
+The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
+
+- locality
+- realism
+- any free will
+
 ## 3. CHSH game optimal strategy derivation
 
 We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
@@ -56,8 +57,6 @@ We consider a maximally entangled pair of qubits (EPR pair). The probability of 
 Why this dependency is described by the following equation?
 
 `P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
-
-![alt text](./img/probability.png)
 
 ### Entangled Singlet State
 
@@ -199,7 +198,14 @@ II. P(same spin) = sin²(θ)
 
 ## 4. Conclusions
 
-TODO
+Our physical world is likely to be a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Such interpretation is close to the de Broglie–Bohm pilot wave theory.
+
+![alt text](./img/mandelbrot.jpg)
+Fig.1 Mandelbrot set visualization.
+
+Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell describe the concept of superdeterminism well:
+
+“There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
 
 ## 5. Bibliography
 
@@ -214,3 +220,10 @@ TODO
 5. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
 
 6. "Interpretations of quantum mechanics", wikipedia, https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
+
+7. "Did The Future Already Happen? - The Paradox of Time", Kurzgesagt, https://www.youtube.com/watch?v=wwSzpaTHyS8
+
+8. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
+
+9. "Pilot Wave Theory and Quantum Realism", PBS Space Time
+, https://www.youtube.com/watch?v=RlXdsyctD50
