@@ -2,7 +2,7 @@
 
 ## 1. Abstract
 
-I am surprised that any scientist can accept the fact that some event can be fundamentally random. Accepting randomness does not sound scientific. The most widely accepted interpretation of quantum mechanics seems to be the Copenhagen one. The Copenhagen interpretation of quantum mechanics tells us that when we do a mesurement, the wave function collapse is totally random. Let's discuss a simple quantum experiment and understand why we try to hide quantum mechanics mystery under the fundamental randomness. Such an experiment could be CHSH game[1].
+I am surprised that any scientist can accept the fact that there could be any fundamentally random event. Accepting randomness does not sound scientific. The most widely accepted interpretation of quantum mechanics seems to be the Copenhagen one. The Copenhagen interpretation of quantum mechanics tells us that when we do a mesurement, the wave function collapse is totally random. Let's discuss a simple quantum experiment and understand why we try to hide quantum mechanics mystery under the fundamental randomness. Such an experiment could be CHSH game[1].
 
 ## 2. Theoretical introduction
 
@@ -46,7 +46,8 @@ The results of quantum experiments requires that we reject the assumptions of, a
 
 - locality
 - realism
-- any free will
+
+Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood.
 
 ## 3. CHSH game optimal strategy derivation
 
@@ -150,6 +151,7 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
               [ sin(θ/2) -cos(θ/2) ]
 ```
 #### Eigenstates of Sθ
+
 ```
 |↑(θ)⟩ = [ cos(θ/2) ]
          [ sin(θ/2) ]
@@ -159,39 +161,39 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
 ```
 
 ### Probability of 'Up-Up' Result
+
 ```
 P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
 ```
-### Tensor product of individual states
-Individual states of particles `1` and `2`:
+
+### Individual states of particles
+
 ```
 |↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
 
 |↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩
 ```
 
-```
-⟨↑₁(θ)| ⊗ ⟨↑₂|
-```
-
 ### P(up-up)
-```
-I. P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
 
-II. ... TODO step by step calculations
 ```
+P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
+
+TODO step by step calculations
+```
+
 Finally:
-```
 
+```
 P(up-up) =  1/2 * sin²(θ)
-
 ```
+
 ### P(same spin)
+
 ```
-I. P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
+P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
 
-II. P(same spin) = sin²(θ)
-
+P(same spin) = sin²(θ)
 ```
 
 ## 4. Conclusions
