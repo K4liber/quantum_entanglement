@@ -1,18 +1,22 @@
-## 1. Problem description
+# Solving quantum mechanics mystery
 
-What is an example of a simple quantum experiment that disagree with a classical intuition implying local realism?
+## 1. Abstract
 
-Such an experiment could be CHSH game[1].
+I am surprised that any scientist can accept the fact that there could be any fundamentally random event. Accepting randomness does not sound scientific. The most widely accepted interpretation of quantum mechanics seems to be the Copenhagen one. The Copenhagen interpretation of quantum mechanics tells us that when we do a mesurement, the wave function collapse is totally random. Let's discuss a simple quantum experiment and understand why we try to hide quantum mechanics mystery under the fundamental randomness. Such an experiment could be CHSH game[1].
 
-We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
+## 2. Theoretical introduction
 
-Why this dependency is described by the following equation?
+Before describing the CHSH game, let's start with a recall of crucial concepts related to the topic. 
 
-`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
+`Locality`: an object is influenced directly only by its immediate surroundings. Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
 
-![alt text](./img/probability.png)
+`Realism`: objects which accord with the principle of realism have defined properties independent of our measurements. The universe exists external to our minds and exists whether or not we observe or measure it.
 
-## 2. Glossary
+`Determinism`: the philosophical belief that all events, including moral choices, are determined completely by previously existing causes. In a deterministic system, given a specific set of initial conditions and laws of nature, the outcome can be predicted with certainty.
+
+`Superdeterminism`: in addition to being deterministic, superdeterministic models also postulate correlations between the state that is measured and the measurement setting.
+
+`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known. Randomness, also known as indeterminism, is the opposite of determinism.
 
 `Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
 
@@ -34,7 +38,24 @@ Why this dependency is described by the following equation?
 
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
+TODO show results with images from 3D visualization
+
+![alt text](./img/probability.png)
+
+The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
+
+- locality
+- realism
+
+Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood.
+
 ## 3. CHSH game optimal strategy derivation
+
+We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
+
+Why this dependency is described by the following equation?
+
+`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
 
 ### Entangled Singlet State
 
@@ -130,6 +151,7 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
               [ sin(θ/2) -cos(θ/2) ]
 ```
 #### Eigenstates of Sθ
+
 ```
 |↑(θ)⟩ = [ cos(θ/2) ]
          [ sin(θ/2) ]
@@ -139,46 +161,51 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
 ```
 
 ### Probability of 'Up-Up' Result
+
 ```
 P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
 ```
-### Tensor product of individual states
-Individual states of particles `1` and `2`:
+
+### Individual states of particles
+
 ```
 |↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
 
 |↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩
 ```
 
-```
-⟨↑₁(θ)| ⊗ ⟨↑₂|
-```
-
 ### P(up-up)
-```
-I. P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
 
-II. ... TODO step by step calculations
 ```
+P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
+
+TODO step by step calculations
+```
+
 Finally:
-```
 
+```
 P(up-up) =  1/2 * sin²(θ)
-
 ```
+
 ### P(same spin)
-```
-I. P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
-
-II. P(same spin) = sin²(θ)
 
 ```
+P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
 
-## 4. Intepretation
+P(same spin) = sin²(θ)
+```
 
-Our physical world is at least four-dimensional (3D space + 1D time, + maybe more) Mandelbrot set like. It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the not locality of the reality coming from the quantum mechanics theory, the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Time is not a special dimension. It seems special because of how a human brain works.
+## 4. Conclusions
 
-Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.org/wiki/De_Broglie%E2%80%93Bohm_theory).
+Our physical world is likely to be a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Such interpretation is close to the de Broglie–Bohm pilot wave theory.
+
+![alt text](./img/mandelbrot.jpg)
+Fig.1 Mandelbrot set visualization.
+
+Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell describe the concept of superdeterminism well:
+
+“There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
 
 ## 5. Bibliography
 
@@ -191,3 +218,16 @@ Such interpretation is close to the "pilot wave theory" (https://en.wikipedia.or
 4. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
 
 5. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
+
+6. "Interpretations of quantum mechanics", wikipedia, https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
+
+7. "Did The Future Already Happen? - The Paradox of Time", Kurzgesagt, https://www.youtube.com/watch?v=wwSzpaTHyS8
+
+8. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
+
+9. "Pilot Wave Theory and Quantum Realism", PBS Space Time
+, https://www.youtube.com/watch?v=RlXdsyctD50
+
+10. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
+
+11. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
