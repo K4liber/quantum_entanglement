@@ -198,7 +198,9 @@ P(same spin) = sin²(θ)
 
 ## 4. Conclusions
 
-Our physical world is likely to be a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. Such interpretation is close to the de Broglie–Bohm pilot wave theory.
+Pilot wave theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It complicates the calculations even more. But should we accept the limits coming from the quantum world and just agree with a fundamentall randomness? Or should we go phylosophical and try to find deterministic theory around the scientifically accepted one?
+
+My gut tells me that our physical world is a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm pilot wave theory. I just need to spit out some math on the table.
 
 ![alt text](./img/mandelbrot.jpg)
 Fig.1 Mandelbrot set visualization.
