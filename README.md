@@ -38,8 +38,6 @@ Before describing the CHSH game, let's start with a recall of crucial concepts r
 
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
-TODO show results with images from 3D visualization
-
 ![alt text](./img/probability.png)
 
 The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
@@ -48,6 +46,16 @@ The results of quantum experiments requires that we reject the assumptions of, a
 - realism
 
 Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood.
+
+TODO describe images
+
+![alt text](./img/alice_bob_3D_0.png)
+
+![alt text](./img/alice_bob_3D_30_30_-45.png)
+
+The case can be presented in the more understandable form of a CHSH game:
+
+TODO translate the following article https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry
 
 ## 3. CHSH game optimal strategy derivation
 
