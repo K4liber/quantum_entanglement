@@ -38,7 +38,12 @@ Before describing the CHSH game, let's start with a recall of crucial concepts r
 
 `Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
+`Singlet state`: pair of spin-1/2 particles fullfiling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on the same axis, is always found to be spin down;
+2) the prior probabilities for measuring each value of spin (up and down) are equal.
+
+
 ![alt text](./img/probability.png)
+Figure 1. TODO description
 
 The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
 
@@ -47,11 +52,13 @@ The results of quantum experiments requires that we reject the assumptions of, a
 
 Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood.
 
-TODO describe images
+Having a singlet state we can easily image a case when we measure spins of both particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing to any point of a sphere. The measurement axis is a 2D surface. If a pointer of an arrow is above the surface we did measure a spin up. Otherwise, we did measure a spin down. Lets visualize a simple case when we measure both particles without any rotation (surface z = 0, Figure 2).
 
-![alt text](./img/alice_bob_3D_0.png)
+![alt text](./img/alice_bob_3D_120_50_0.png)
+Figure 2. TODO description
 
 ![alt text](./img/alice_bob_3D_30_30_-45.png)
+Figure 3. TODO description
 
 The case can be presented in the more understandable form of a CHSH game:
 
@@ -211,9 +218,9 @@ Pilot wave theory does not introduce any novelty that can explain experiments be
 My gut tells me that our physical world is a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm pilot wave theory. I just need to spit out some math on the table.
 
 ![alt text](./img/mandelbrot.jpg)
-Fig.1 Mandelbrot set visualization.
+Figure 4 Mandelbrot set visualization.
 
-Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell describe the concept of superdeterminism well:
+Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell bring the concept of superdeterminism a little closer:
 
 “There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
 
