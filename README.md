@@ -65,9 +65,56 @@ The results of quantum experiments requires that we reject the assumptions of, a
 
 Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood. Since locality in such interpretation is safed, we must reject the realism. What does it mean? It means that without an interaction, any quantum objects or group of objects described by wave function are not a physical thing. They are just a "potential physical things" with a given probabilities to get real at the moment of interaction (its called wave function collapse). Moreover, the result of a collapse is fundamentally random. It cannot be deduce from any "hidden variables" or other missing data. Sticking with a localism we sacrifice causation.  “Do you really believe the moon is not there when you are not looking at it?” Einstein once asked to underline his doubts in the realess world.
 
-The concept of magically strong correlations can be presented in the more understandable form of a CHSH game:
+The concept of magically strong correlations can be presented in the more understandable form of a CHSH game (https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry):
 
-TODO translate the following article https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry
+Let's imagine a game in which our opponent prepares three cards that are invisible to us and claims the following statements:
+
+1) The first and second cards are the same suit
+2) The second and third cards are the same suit
+3) The first and third cards are different suits
+
+Our task is to determine which of these statements is false. We indicate any two cards, and our opponent reveals them. If the revealed cards contradict the statement that refers to them, we win $2. If they agree, we lose $1.
+
+It is easy to see that all three statements cannot be true. Even if we choose the cards to reveal completely randomly, we have a 1/3 chance of detecting a false statement. Our expected value for this game is:
+
+`1/3 x 2$ + 2/3 x (-1$) = 0`
+
+To prevent the opponent from cheating, we introduce the following modification: the opponent must prepare two copies of the cards and send them to his helpers: Alice and Bob. We ask the first helper for one card, and the second helper for the other. To physically prevent these helpers from communicating with each other, we place them far apart and ask them simultaneously - requiring the answer immediately, so that they do not have time to send the information we asked to each other, even at the speed of light. To ensure that they get identical sets of cards, we are given the opportunity to ask them about the same card and, for example, we determine that if the answers are different, we win $1,000,000. With such a punishment we can be sure the opponent do not cheat.
+
+Even if the opponent does not give the helpers fixed answers, but only some instructions on how to answer, the helpers must provide the card suits based only on these instructions and the number of the card we are asking about. It can be shown that no set of instructions gives the opponent the possibility of winning.
+
+Bell showed that, according to quantum mechanics, the opponent can create a quantum setup what will allow him to win.
+
+This is done as follows: the opponent prepares a singlet state with the assumption that one of the observers, e.g. Bob, after measuring the local value of the spin component always changes the sign of the experimentally obtained value.
+
+The particles are sent in the form of successive pairs to Alice and Bob, each of them receiving one of the given pair. For each pair, they perform measurements of a certain spin component of their particle.
+
+It can be calculated that if they measure the spin components of these two particles along different axes, then depending on the angle between these axes, the results of the two measurements are related to each other:
+
+- if the axes are at an angle of 60° to each other – the probability of an identical result (after Bob's sign swap) is 3/4 (see Figure 1, quantum correlation),
+- if the axes are at an angle of 120° to each other – the probability of an identical result is 1/4.
+
+Particle A is sent to Alice, and particle B to Bob. The helpers treat the questions about the individual cards as instructions on which axis to measure the spin value of their particle. They agree in advance that their measurements will only be in a certain fixed plane, e.g. XY, where the Y direction is vertical and the X direction is horizontal.
+
+- Question about the first card: along an axis tilted from the vertical (Y) to the left by 60°.
+- Question about the second card: along the vertical axis (Y).
+- Question about the third card: along an axis tilted from the vertical by 60° to the right.
+
+The helpers give us the colors of cards according to the result (e.g. red if the measurement gave an upward spin and black if it gave a downward spin).
+
+As a result, the helpers' answers are correlated in the following way:
+
+- If we ask about the same card - the probability of an identical result is 100% (our chance of winning is 0%). But we can always ask without any consequences just to verify the liability of the opponent.
+- If we ask about adjacent cards - the probability of an identical result is 75% (our chance of winning is 25%).
+- If we ask about the first and third cards - the probability of an identical result is 25% (our chance of winning is 25%).
+
+Thus, on average, our expected value of the game (when we do not ask for the same card) is:
+
+`1/4 x 2$ + 3/4 x (-1$) = -1/4$`
+
+(this formula holds for both the case of asking for adjacent cards and for the first and third cards). This means that, contrary to our earlier claims, the opponent has a winning strategy when playing the game multiple times.
+
+This contradiction with the common-sense proof that our expected value of the game is nonnegative is precisely an example of a violation of Bell's inequality. Although the helpers cannot communicate with each other, entangled pairs give them the possibility of correlating their behaviors sufficiently to win the game.
 
 ## 3. CHSH game optimal strategy derivation
 
