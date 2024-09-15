@@ -43,24 +43,29 @@ Before describing the CHSH game, let's start with a recall of crucial concepts r
 
 
 ![alt text](./img/probability.png)
-Figure 1. TODO description
+Figure 1. Correlation between singlet state spins as a function of angle difference between mesurement devices.
+
+Having a singlet state we can easily create a classical image of a case when we measure spins of both particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing to any point of a sphere. The measurement axis is a 2D surface. If a pointer of an arrow is above the surface we did measure a spin up (red color). Otherwise, we did measure a spin down (blue color). Lets visualize a simple case when we measure both particles without any rotation (measurment angles difference = 0 degrees, Figure 2.). The left particle (sphere on the left of the image) has been measured with spin down (blue). The right particle has been measured with spin up (red).
+
+![alt text](./img/alice_bob_3D_120_50_0.png)
+Figure 2. Classical visualization of singlet state measurements without angle difference. 
+
+Without any angle difference the values of measured singlet state spins are always opposite. It is clear and it does work in the same way in both, classical and quantum considerations. Figure 3 shows a classical visualization of our measurement experiment in case of rotating one of the measurement devices by 45 degress around Y-axis. There are cases (like in Figure 3) when spins are measured in such a moment where the rotation angle leads to the same spin value measurement (both up, red color). Performing multiple measurments with such a rotation on multiple singlet states we do not always end up with opposite spin values. When we plot reasults of those multiple measurements we end up with a linear correlation between spin equality and the rotation angle (see Figure 1, linear correlation).
+
+The magical things happens when we actually perform such multiple experiments on multiple singlet states and plot a correlation chart. On the plot we see that the correlation is described by the following forumula: `sin²(θ/2)` (see Figure 1, quantum correlation). One can ask, what is magical with that? Its just another formula, not a linear, but trigonometric. The formula indicates that we actually have a correlation that is not possible in the local and real classical point of view. We are not able to create such a classical setup when we get stronger correlation that the linear one that we have shown here. For the quantum setup we can separate the particles from a single state to hundreds of kilometers and still get the correlations described by `sin²(θ/2)`. Its worth to underline, that we do not observe any data exchange faster than light (actually it should instant data exchange based on the experiments results). But we do observe correlations that works without carrying about the distance. So the statement about "spooky action at a distance" is a bit misleading. It should rather be "spooky correlation at a distance". We are not able to send any data faster than light in such a quantum setup.
+
+
+![alt text](./img/alice_bob_3D_30_30_-45.png)
+Figure 3. Classical visualization of singlet state measurements with angle difference equals 45 degrees.
 
 The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
 
 - locality
 - realism
 
-Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood.
+Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood. Since locality in such interpretation is safed, we must reject the realism. What does it mean? It means that without an interaction, any quantum objects or group of objects described by wave function are not a physical thing. They are just a "potential physical things" with a given probabilities to get real at the moment of interaction (its called wave function collapse). Moreover, the result of a collapse is fundamentally random. It cannot be deduce from any "hidden variables" or other missing data. Sticking with a localism we sacrifice causation.  “Do you really believe the moon is not there when you are not looking at it?” Einstein once asked to underline his doubts in the realess world.
 
-Having a singlet state we can easily image a case when we measure spins of both particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing to any point of a sphere. The measurement axis is a 2D surface. If a pointer of an arrow is above the surface we did measure a spin up. Otherwise, we did measure a spin down. Lets visualize a simple case when we measure both particles without any rotation (surface z = 0, Figure 2).
-
-![alt text](./img/alice_bob_3D_120_50_0.png)
-Figure 2. TODO description
-
-![alt text](./img/alice_bob_3D_30_30_-45.png)
-Figure 3. TODO description
-
-The case can be presented in the more understandable form of a CHSH game:
+The concept of magically strong correlations can be presented in the more understandable form of a CHSH game:
 
 TODO translate the following article https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry
 
@@ -215,10 +220,10 @@ P(same spin) = sin²(θ)
 
 Pilot wave theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It complicates the calculations even more. But should we accept the limits coming from the quantum world and just agree with a fundamentall randomness? Or should we go phylosophical and try to find deterministic theory around the scientifically accepted one?
 
-My gut tells me that our physical world is a Mandelbrot set like (Fig.1), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm pilot wave theory. I just need to spit out some math on the table.
+My gut tells me that our physical world is a Mandelbrot set like (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm pilot wave theory. I just need to spit out some math on the table.
 
 ![alt text](./img/mandelbrot.jpg)
-Figure 4 Mandelbrot set visualization.
+Figure 4. Mandelbrot set visualization.
 
 Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell bring the concept of superdeterminism a little closer:
 
