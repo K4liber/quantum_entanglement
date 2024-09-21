@@ -122,7 +122,7 @@ We consider a maximally entangled pair of qubits (EPR pair). The probability of 
 
 Why this dependency is described by the following equation?
 
-`P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = sin²(θ/2)`
+`P(same spin) = sin²(θ/2)`
 
 ### Entangled Singlet State
 
@@ -227,40 +227,184 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
          [ cos(θ/2) ]  
 ```
 
-### Probability of 'Up-Up' Result
+### (TODO JBIEL review) step by step deriviation for P(same spin)
 
 ```
-P(↑₁↑₂) = |⟨↑₁(θ) ⊗ ↑₂ |Ψ⟩|² 
+P(same spin) = P(↑₁↑₂) + P(↓₁↓₂)
+
+P(up-up) = P(↑₁↑₂) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
 ```
 
-### Individual states of particles
+The singlet state of two spin-1/2 particles (electrons) is given by:
 
 ```
-|↑₁(θ)⟩ = cos(θ/2)|↑₁⟩ + sin(θ/2)|↓₁⟩
-
-|↑₂⟩ = 1 |↑₂⟩ + 0|↓₂⟩
+|Ψ⟩ = (1/√2) [ |↑₁⟩|↓₂⟩ − |↓₁⟩|↑₂⟩ ]
 ```
 
-### P(up-up)
+#### Define the Measurement States
+
+We are measuring the spins along different axes:
+
+- **For Particle 1**: Measured along an axis rotated by an angle θ in the x-y plane. The eigenstates are:
+
+  ```
+  |↑₁(θ)⟩ = cos(θ/2) · |↑₁⟩ + sin(θ/2) · |↓₁⟩
+
+  |↓₁(θ)⟩ = −sin(θ/2) · |↑₁⟩ + cos(θ/2) · |↓₁⟩
+  ```
+
+- **For Particle 2**: Measured along the original z-axis. The eigenstates are `|↑₂⟩` and `|↓₂⟩`.
+
+#### Compute the Probability \( P(↑₁↑₂) \)
+
+We want to compute:
 
 ```
-P(up-up) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
-
-TODO step by step calculations
+P(↑₁↑₂) = | ⟨↑₁(θ)| ⊗ ⟨↑₂| Ψ⟩ |²
 ```
 
-Finally:
+#### Expand ⟨↑₁(θ)| ⊗ ⟨↑₂|
 
 ```
-P(up-up) =  1/2 * sin²(θ)
+⟨↑₁(θ)| ⊗ ⟨↑₂| = [ cos(θ/2) · ⟨↑₁| + sin(θ/2) · ⟨↓₁| ] ⊗ ⟨↑₂|
 ```
 
-### P(same spin)
+#### Apply to the Singlet State
 
 ```
-P(same spin) = P(up-up) + P(down-down) = 2 * 1/2 * sin²(θ)
+⟨↑₁(θ)| ⊗ ⟨↑₂| Ψ⟩ = (1/√2) [ ⟨↑₁(θ)| ⊗ ⟨↑₂| ( |↑₁⟩|↓₂⟩ − |↓₁⟩|↑₂⟩ ) ]
+```
 
-P(same spin) = sin²(θ)
+#### Compute Inner Products
+
+Compute each term separately.
+
+**First Term:**
+
+```
+⟨↑₁(θ)| ⊗ ⟨↑₂| |↑₁⟩|↓₂⟩ = [ cos(θ/2) · ⟨↑₁|↑₁⟩ + sin(θ/2) · ⟨↓₁|↑₁⟩ ] × ⟨↑₂|↓₂⟩
+```
+
+- ⟨↑₁|↑₁⟩ = 1
+- ⟨↓₁|↑₁⟩ = 0
+- ⟨↑₂|↓₂⟩ = 0
+
+So the first term evaluates to:
+
+```
+[ cos(θ/2) × 1 + sin(θ/2) × 0 ] × 0 = 0
+```
+
+**Second Term:**
+
+```
+−⟨↑₁(θ)| ⊗ ⟨↑₂| |↓₁⟩|↑₂⟩ = −[ cos(θ/2) · ⟨↑₁|↓₁⟩ + sin(θ/2) · ⟨↓₁|↓₁⟩ ] × ⟨↑₂|↑₂⟩
+```
+
+- ⟨↑₁|↓₁⟩ = 0
+- ⟨↓₁|↓₁⟩ = 1
+- ⟨↑₂|↑₂⟩ = 1
+
+So the second term evaluates to:
+
+```
+−[ cos(θ/2) × 0 + sin(θ/2) × 1 ] × 1 = −sin(θ/2)
+```
+
+#### Combine the Results
+
+Total amplitude:
+
+```
+⟨↑₁(θ)| ⊗ ⟨↑₂| Ψ⟩ = (1/√2) [ 0 − sin(θ/2) ] = −( sin(θ/2) ) ⁄ √2
+```
+
+#### Compute the Probability
+
+```
+P(↑₁↑₂) = | ⟨↑₁(θ)| ⊗ ⟨↑₂| Ψ⟩ |² = [ −( sin(θ/2) ) ⁄ √2 ]² = (1⁄2) · sin²(θ/2)
+```
+
+#### Compute the Probability \( P(↓₁↓₂) \)
+
+Similarly, we compute:
+
+```
+P(↓₁↓₂) = | ⟨↓₁(θ)| ⊗ ⟨↓₂| Ψ⟩ |²
+```
+
+#### Expand ⟨↓₁(θ)| ⊗ ⟨↓₂|
+
+```
+⟨↓₁(θ)| ⊗ ⟨↓₂| = [ −sin(θ/2) · ⟨↑₁| + cos(θ/2) · ⟨↓₁| ] ⊗ ⟨↓₂|
+```
+
+#### Apply to the Singlet State
+
+```
+⟨↓₁(θ)| ⊗ ⟨↓₂| Ψ⟩ = (1/√2) [ ⟨↓₁(θ)| ⊗ ⟨↓₂| ( |↑₁⟩|↓₂⟩ − |↓₁⟩|↑₂⟩ ) ]
+```
+
+#### Compute Inner Products
+
+**First Term:**
+
+```
+⟨↓₁(θ)| ⊗ ⟨↓₂| |↑₁⟩|↓₂⟩ = [ −sin(θ/2) · ⟨↑₁|↑₁⟩ + cos(θ/2) · ⟨↓₁|↑₁⟩ ] × ⟨↓₂|↓₂⟩
+```
+
+- ⟨↑₁|↑₁⟩ = 1
+- ⟨↓₁|↑₁⟩ = 0
+- ⟨↓₂|↓₂⟩ = 1
+
+So the first term evaluates to:
+
+```
+[ −sin(θ/2) × 1 + cos(θ/2) × 0 ] × 1 = −sin(θ/2)
+```
+
+**Second Term:**
+
+```
+−⟨↓₁(θ)| ⊗ ⟨↓₂| |↓₁⟩|↑₂⟩ = −[ −sin(θ/2) · ⟨↑₁|↓₁⟩ + cos(θ/2) · ⟨↓₁|↓₁⟩ ] × ⟨↓₂|↑₂⟩
+```
+
+- ⟨↑₁|↓₁⟩ = 0
+- ⟨↓₁|↓₁⟩ = 1
+- ⟨↓₂|↑₂⟩ = 0
+
+So the second term evaluates to:
+
+```
+−[ −sin(θ/2) × 0 + cos(θ/2) × 1 ] × 0 = 0
+```
+
+#### Combine the Results
+
+Total amplitude:
+
+```
+⟨↓₁(θ)| ⊗ ⟨↓₂| Ψ⟩ = (1/√2) [ −sin(θ/2) + 0 ] = −( sin(θ/2) ) ⁄ √2
+```
+
+#### Compute the Probability
+
+```
+P(↓₁↓₂) = | ⟨↓₁(θ)| ⊗ ⟨↓₂| Ψ⟩ |² = [ −( sin(θ/2) ) ⁄ √2 ]² = (1⁄2) · sin²(θ/2)
+```
+
+#### Compute the Total Probability P(same spin)
+
+```
+P(same spin) = P(↑₁↑₂) + P(↓₁↓₂) = (1⁄2) · sin²(θ/2) + (1⁄2) · sin²(θ/2) = sin²(θ/2)
+```
+
+**Final Result:**
+
+The probability that both particles are found with the same spin when measured along axes separated by an angle θ is:
+
+```
+P(same spin) = sin²(θ/2)
 ```
 
 ## 4. Conclusions
