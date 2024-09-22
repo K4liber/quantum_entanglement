@@ -223,11 +223,14 @@ Sθ =  (ħ/2) * [ cos(θ/2)  sin(θ/2) ]
          [ cos(θ/2) ]  
 ```
 
-### (TODO JBIEL review) step by step deriviation for P(same spin)
+### P(same spin) calculation
 
+Let's deriviate the following formula step by step:
 ```
 P(same spin) = P(↑₁↑₂) + P(↓₁↓₂)
-
+```
+Probability that we measure spin up on both particles:
+```
 P(up-up) = P(↑₁↑₂) = |(⟨↑₁(θ)| ⊗ ⟨↑₂|)|Ψ⟩|² 
 ```
 
