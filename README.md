@@ -1,8 +1,8 @@
-# Solving quantum mechanics mystery
+# Demystifying Quantum Mechanics: Beyond Randomness and Towards Determinism
 
 ## 1. Abstract
 
-I am surprised by a scientist accepting the fact that there could be any fundamentally random event. Accepting randomness does not sound scientific. The most widely accepted interpretation of quantum mechanics[1] seems to be the Copenhagen collection of views. The Copenhagen interpretation of quantum mechanics tells us that when we do a mesurement, the wave function collapse is fundamentally random. Let's discuss a simple quantum experiment and understand why we try to hide quantum mechanics mystery under the randomness. Such an experiment could be CHSH game[2].
+While the mathematical framework of quantum mechanics is well-established and not that hard to understand, the interpretation of its experimental results remains challenging. The most widely accepted interpretation of quantum mechanics[1] is the Copenhagen collection of views. The Copenhagen interpretation of quantum mechanics tells us that when we do a measurement, the wave function collapse is fundamentally random. I am surprised by a scientist accepting the fact that there could be any fundamentally random event. The acceptance of inherent randomness in quantum mechanics raises philosophical questions about the nature of scientific determinism. Let's discuss a simple quantum experiment and understand why we try to interpret quantum mechanics mystery using randomness. Such an experiment could be CHSH game[2]. At the end of the article some contrary interpretation is going to be described. It is more a philosophical discussion, but maybe it will lead to some actual science (math based) in the future.
 
 ## 2. Theoretical introduction
 
@@ -28,7 +28,7 @@ Before describing the CHSH game, let's start with a recall of crucial concepts r
 
 `Two-electron system`: System of two electrons where each electron can be in either the spin-up or spin-down state, resulting in four possible combinations for the system.
 
-`Singlet state`: pair of spin-1/2 particles fullfiling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on the same axis, is always found to be spin down;
+`Singlet state`: pair of spin-1/2 particles fulfilling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on the same axis, is always found to be spin down;
 2) the prior probabilities for measuring each value of spin (up and down) are equal.
 
 `Spin Angular Momentum (S)`: An intrinsic property of particles, independent of their spatial motion. It's like a particle spinning around its own axis. 
@@ -44,13 +44,13 @@ Having a singlet state we can easily create a classical image of a case when we 
 ![alt text](./img/alice_bob_3D_120_50_0.png)
 Figure 1. Classical visualization of singlet state measurements without angle difference. 
 
-Without any angle difference the values of measured singlet state spins are always opposite. It is clear and it does work in the same way in both, classical and quantum considerations. Figure 2 shows a classical visualization of our measurement experiment in case of rotating one of the measurement devices by 45 degress around Y-axis. There are cases (like in Figure 2) when spins are measured in such a moment where the rotation angle leads to the same spin value measurement (both up, red color). Performing multiple measurments with such a rotation on multiple singlet states we do not always end up with opposite spin values. When we plot reasults of those multiple measurements we end up with a linear correlation between spin equality and the rotation angle (see Figure 3, linear correlation).
+Without any angle difference the values of measured singlet state spins are always opposite. It is clear and it works in the same way in both, classical and quantum considerations. Figure 2 shows a classical visualization of our measurement experiment in case of rotating one of the measurement devices by 45 degress around Y-axis. There are cases (like in Figure 2) when spins are measured in such a moment where the rotation angle leads to the same spin value measurement (both up, red color). Performing multiple measurments with such a rotation on multiple singlet states we do not always end up with opposite spin values. When we plot reasults of those multiple measurements we end up with a linear correlation between spin equality and the rotation angle (see Figure 3, linear correlation).
 
 ![alt text](./img/alice_bob_3D_30_30_-45.png)
 Figure 2. Classical visualization of singlet state measurements with angle difference equals 45 degrees.
 
 ![alt text](./img/probability.png)
-Figure 3. Correlation between singlet state spins as a function of angle difference between mesurement devices.
+Figure 3. Correlation between singlet state spins as a function of angle difference between measurement devices.
 
 The magical things happens when we actually perform such multiple experiments on multiple singlet states and plot a correlation chart. On the plot we see that the correlation is described by the following forumula: `sin²(θ/2)` (see Figure 3, quantum correlation). One can ask, what is magical with that? Its just another formula, not a linear, but trigonometric. The formula indicates that we experience a correlation that is not possible in the local and real classical point of view. We are not able to create such a classical setup when we get stronger correlation that the linear one that we have presented. For the quantum setup we can separate the particles from a single state hundreds kilometers away and still get the correlations described by `sin²(θ/2)`. Its worth to underline, that we do not observe any data exchange faster than light (actually it should be instant data exchange, based on the experiments results). But we do observe correlations that works without carrying about the distance. The famous statement about "spooky action at a distance" is a bit misleading. It should rather be "spooky correlation at a distance". We are not able to send any data faster than light in such a quantum setup.
 
@@ -61,7 +61,7 @@ The results of quantum experiments requires that we reject the assumptions of, a
 
 Based on the Copenhagen interpretation there are no non-local interactions. What we do observe are non-local correlations, which tend to be stronger than non-local correlations in classical physics. The famous quantum entanglement is an inherently local phenomenon because for the entanglement itself to happen, both particles must be in a direct neighborhood. Since locality in such interpretation is safed, we must reject the realism. What does it mean? It means that without an interaction, any quantum objects or group of objects described by wave function are not a physical thing. They are just a "potential physical things" with a given probabilities to get real at the moment of interaction (its called wave function collapse). Moreover, the result of a collapse is fundamentally random. It cannot be deduce from any "hidden variables" or other missing data. Sticking with a localism we sacrifice causation.  “Do you really believe the moon is not there when you are not looking at it?” Einstein once asked to underline his doubts in the realess interpretation.
 
-The concept of magically strong correlations can be presented in the more understandable form of a CHSH game [3]:
+The concept of magically strong correlations can be presented in the more understandable form of a CHSH game [3]. The CHSH game illustrates how quantum mechanics can violate classical limits on correlations, leading to results that are impossible in any classical setup.
 
 Let's imagine a game in which our opponent prepares three cards that are invisible to us and claims the following statements:
 
@@ -114,11 +114,11 @@ This contradiction with the common-sense proof that our expected value of the ga
 
 ## 3. CHSH game optimal strategy derivation
 
-We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same state depends on the angle between measurement settings.
-
-Why this dependency is described by the following equation?
+We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same spin depends on the angle between measurement settings. We will now explore why the quantum mechanical probability of finding both particles in the same spin state is given by the formula:
 
 `P(same spin) = sin²(θ/2)`
+
+This involves applying rotation operators to the entangled singlet state.
 
 ### Entangled Singlet State
 
@@ -406,11 +406,11 @@ The probability that both particles are found with the same spin when measured a
 P(same spin) = sin²(θ/2)
 ```
 
-## 4. Intepreting results of the experiments
+## 4. Beyond Randomness and Towards Determinism
 
-Experiments force us to reject either locality or realism (or both ... that will be crazy!). It was already mentioned that I am against interpretations based on fundamental randomness. Which interpretation saves realism and at the same time rejects fundamental randomness? The promising candidate is de Broglie–Bohm theory. The theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It even more complicated the calculations. But should we accept the limits coming from the quantum world and just agree with a fundamental randomness? Or should we go phylosophical and try to find deterministic theory around the scientifically accepted one?
+Experiments force us to reject either locality or realism (or both ... that will be crazy!). Just to recal, the most accepted interpretation is based on fundamental randomness. Are there any interpretations saving realism and at the same time rejecting fundamental randomness? The promising candidate is de Broglie–Bohm theory. The theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It even more complicated the calculations. But should we accept the limits coming from the quantum world and just agree with a fundamental randomness? This opens a philosophical debate on whether we should seek deterministic alternatives to the widely accepted probabilistic framework of quantum mechanics.
 
-My gut tells me that our physical world is a Mandelbrot set like (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front[5]. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not today, maybe some other day).
+My gut tells me that our physical world is a Mandelbrot set like (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front[5]. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not that easy, but maybe some day).
 
 ![alt text](./img/mandelbrot.jpg)
 Figure 4. Mandelbrot set visualization.
@@ -419,13 +419,15 @@ Since the reality is calculated up front, there is no place for a free-will. The
 
 “There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
 
+While interpretations of quantum mechanics vary, experimental evidence continues to challenge our classical understanding of the world. Whether through randomness or determinism, the mysteries of quantum entanglement remain at the forefront of scientific inquiry.
+
 ## 5. Bibliography
 
 1. "Interpretations of quantum mechanics", wikipedia, https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
 
 2. "CHSH (Clauser-Horne-Shimony-Holt) game", 1969, https://en.wikipedia.org/wiki/CHSH_inequality#CHSH_game
 
-3. [PL] "Twierdzenie_Bella w formie gry", wikipedia, https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry
+3. "Twierdzenie Bella w formie gry", wikipedia.pl, https://pl.wikipedia.org/wiki/Twierdzenie_Bella#Prezentacja_twierdzenia_Bella_w_formie_gry
 
 4. "Bell's theorem", John Stewart Bell, 1964,  https://en.wikipedia.org/wiki/Bell%27s_theorem
 
