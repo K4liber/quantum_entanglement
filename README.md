@@ -6,6 +6,8 @@ While the mathematical framework of quantum mechanics is well-established and no
 
 ## 2. Theoretical introduction
 
+### Crucial concepts description
+
 Before describing the CHSH game, let's start with a recall of crucial concepts related to the topic. 
 
 `Locality`: an object is influenced directly only by its immediate surroundings. Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
@@ -24,20 +26,12 @@ Before describing the CHSH game, let's start with a recall of crucial concepts r
 
 `Entanglement`: Two or more particles can become interconnected in a way that their states are no longer independent. They are said to be entangled.
 
-`Tensor Product (⊗)`: The tensor product is used to describe combined quantum systems. For example, |↑⟩₁|↓⟩₂ represents a two-electron system where electron 1 is spin-up and electron 2 is spin-down.
-
 `Two-electron system`: System of two electrons where each electron can be in either the spin-up or spin-down state, resulting in four possible combinations for the system.
 
-`Singlet state`: pair of spin-1/2 particles fulfilling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on the same axis, is always found to be spin down;
+`Singlet state`: pair of spin-1/2 particles fulfilling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on THE SAME AXIS, is always found to be spin down;
 2) the prior probabilities for measuring each value of spin (up and down) are equal.
 
-`Spin Angular Momentum (S)`: An intrinsic property of particles, independent of their spatial motion. It's like a particle spinning around its own axis. 
-
-`Spin operator`: describes the spin angular momentum of a particle. Such an operator is applied to a mathematical representation of the physical state of a system and yields an angular momentum value if the state has a definite value for it.
-
-`Spin Rotation operator R(θ)`: It represents a rotation of the spin state of the particle by an angle θ about an axis in the x-y plane. This rotation doesn't change the overall magnitude of the spin, but it changes its orientation in space. The specific form of R(θ) follows from the general principles of how rotations are represented in quantum mechanics. For spin-1/2 systems, 2x2 matrices act on the two-dimensional state vector.
-
-`Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
+### Classical intuition about the topic
 
 Having a singlet state we can easily create a classical image of a case when we measure spins of both particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing to any point of a sphere. The measurement plane is a 2D surface. If a pointer of an arrow is above the surface we did measure a spin up (red color). Otherwise, we did measure a spin down (blue color). Lets visualize a simple case when we measure both particles without any rotation (measurment angles difference = 0 degrees, Figure 1.). The left particle (sphere on the left side of the image) has been measured with spin down (blue). The right particle has been measured with spin up (red).
 
@@ -52,7 +46,9 @@ Figure 2. Classical visualization of singlet state measurements with angle diffe
 ![alt text](./img/probability.png)
 Figure 3. Correlation between singlet state spins as a function of angle difference between measurement devices.
 
-The magical things happens when we actually perform such multiple experiments on multiple singlet states and plot a correlation chart. On the plot we see that the correlation is described by the following forumula: `sin²(θ/2)` (see Figure 3, quantum correlation). One can ask, what is magical with that? Its just another formula, not a linear, but trigonometric. The formula indicates that we experience a correlation that is not possible in the local and real classical point of view. We are not able to create such a classical setup when we get stronger correlation that the linear one that we have presented. For the quantum setup we can separate the particles from a single state hundreds kilometers away and still get the correlations described by `sin²(θ/2)`. Its worth to underline, that we do not observe any data exchange faster than light (actually it should be instant data exchange, based on the experiments results). But we do observe correlations that works without carrying about the distance. The famous statement about "spooky action at a distance" is a bit misleading. It should rather be "spooky correlation at a distance". We are not able to send any data faster than light in such a quantum setup.
+### Results of quantum experiments
+
+The magical things happens when we actually perform such multiple experiments on multiple singlet states and plot a correlation chart. On the plot we see that the correlation is described by the following forumula: `sin²(θ/2)` (see Figure 3, quantum correlation). One can ask, what is magical about that? Its just another formula, not a linear, but trigonometric. The formula indicates that we experience a correlation that is not possible in the local and real classical point of view. We are not able to create such a classical setup when we get stronger correlation that the linear one that we have presented. For the quantum setup we can separate the particles from a single state hundreds kilometers away and still get the correlations described by `sin²(θ/2)`. Its worth to underline, that we do not observe any data exchange faster than light (actually it should be instant data exchange, based on the experiments results). But we do observe correlations that works without carrying about the distance. The famous statement about "spooky action at a distance" is a bit misleading. It should rather be "spooky correlation at a distance". We are not able to send any data faster than light in such a quantum setup.
 
 The results of quantum experiments requires that we reject the assumptions of, at least one of the following:
 
@@ -114,11 +110,23 @@ This contradiction with the common-sense proof that our expected value of the ga
 
 ## 3. CHSH game optimal strategy derivation
 
-We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same spin depends on the angle between measurement settings. We will now explore why the quantum mechanical probability of finding both particles in the same spin state is given by the formula:
+We consider a maximally entangled pair of qubits (EPR pair). The probability of finding both qubits with the same spin depends on the angle (`θ`) between measurement settings. We will now explore why the quantum mechanical probability of finding both particles in the same spin state is given by the formula:
 
 `P(same spin) = sin²(θ/2)`
 
-This involves applying rotation operators to the entangled singlet state.
+This involves applying rotation operators to the entangled singlet state. We are going to derivate, step by step, the CHSH game results using mathematical formalism of quantum mechanics. You can either believe that the formula is correct (if you do not like math) or analyze the step by step deriviation. You can take it for granted that the formula is correct since it is confirmed based on the results of quantum experiments.
+
+### Mathematical formalism concepts
+
+`Tensor Product (⊗)`: The tensor product is used to describe combined quantum systems. For example, |↑⟩₁|↓⟩₂ represents a two-electron system where electron 1 is spin-up and electron 2 is spin-down.
+
+`Spin Angular Momentum (S)`: An intrinsic property of particles, independent of their spatial motion. It's like a particle spinning around its own axis. 
+
+`Spin operator`: describes the spin angular momentum of a particle. Such an operator is applied to a mathematical representation of the physical state of a system and yields an angular momentum value if the state has a definite value for it.
+
+`Spin Rotation operator R(θ)`: It represents a rotation of the spin state of the particle by an angle θ about an axis in the x-y plane. This rotation doesn't change the overall magnitude of the spin, but it changes its orientation in space. The specific form of R(θ) follows from the general principles of how rotations are represented in quantum mechanics. For spin-1/2 systems, 2x2 matrices act on the two-dimensional state vector.
+
+`Unitary Operation`: The rotation operator is a unitary operator. This means that it preserves the normalization of the quantum state (i.e., the probability of finding the particle in a particular state remains 1).
 
 ### Entangled Singlet State
 
@@ -410,7 +418,7 @@ P(same spin) = sin²(θ/2)
 
 Experiments force us to reject either locality or realism (or both ... that will be crazy!). Just to recal, the most accepted interpretation is based on fundamental randomness. Are there any interpretations saving realism and at the same time rejecting fundamental randomness? The promising candidate is de Broglie–Bohm theory. The theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It even more complicated the calculations. But should we accept the limits coming from the quantum world and just agree with a fundamental randomness? This opens a philosophical debate on whether we should seek deterministic alternatives to the widely accepted probabilistic framework of quantum mechanics.
 
-My gut tells me that our physical world is a Mandelbrot set like (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front[5]. Such interpretation allows the present to be determined not only by the past, but by the future as well. My interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not that easy, but maybe some day).
+Assuming the determinism, our physical world is kind of a simulation and could be a Mandelbrot set like simulation (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front[5]. Such interpretation allows the present to be determined not only by the past, but by the future as well. The interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not that easy, but maybe some day).
 
 ![alt text](./img/mandelbrot.jpg)
 Figure 4. Mandelbrot set visualization.
@@ -418,6 +426,11 @@ Figure 4. Mandelbrot set visualization.
 Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell bring the concept of superdeterminism a little closer:
 
 “There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
+
+Based on such a superdeterministic interpretation, one can conclude that "the decision maker" in the present is somehow influenced by the decision outcome happening in the future. Superdeterminism includes the concept of total connectivness. To sum up the John Bell words let's recall another quote: 
+
+> In nature, nothing exists alone.  
+~Rachel Carson
 
 While interpretations of quantum mechanics vary, experimental evidence continues to challenge our classical understanding of the world. Whether through randomness or determinism, the mysteries of quantum entanglement remain at the forefront of scientific inquiry.
 
