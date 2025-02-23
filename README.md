@@ -2,7 +2,19 @@
 
 ## 1. Abstract
 
-While the mathematical framework of quantum mechanics is well-established and not that hard to understand, the interpretation of its experimental results remains challenging. The most widely accepted interpretation of quantum mechanics[1] is the Copenhagen collection of views. The Copenhagen interpretation of quantum mechanics tells us that when we do a measurement, the wave function collapse is fundamentally random. I am surprised by a scientist accepting the fact that there could be any fundamentally random event. The acceptance of inherent randomness in quantum mechanics raises philosophical questions about the nature of scientific determinism. Let's discuss a simple quantum experiment and understand why we try to interpret quantum mechanics mystery using randomness. Such an experiment could be CHSH game[2]. At the end of the article some contrary interpretation is going to be described. It is more a philosophical discussion, but maybe it will lead to some actual science (math based) in the future.
+While the mathematical framework of quantum mechanics is well-established and not hard to understand, 
+interpreting results of quantum experiments remains challenging. 
+The most widely accepted interpretation of quantum mechanics[1] is the Copenhagen collection of views 
+(called the Copenhagen interpretation). 
+The Copenhagen interpretation of quantum mechanics tells us that when we do a measurement, 
+the wave function collapse is fundamentally random. I am a bit dissapointed that any scientist can 
+accept the fact that there could be any fundamentally random event. The acceptance of inherent randomness 
+in quantum mechanics raises philosophical questions about the nature of scientific determinism. 
+Let's discuss a simple quantum experiment and understand why we try to interpret quantum mechanics 
+mystery using randomness. Such an experiment could be CHSH (name comes from from Clauser-Horne-Shimony-Holt 
+inequality) game[2]. At the end of the article some contrary interpretation is going to be described. 
+The contrary intepretation is more of a philosophical discussion, but maybe it will lead to some actual 
+(math based) science in the future.
 
 ## 2. Theoretical introduction
 
@@ -10,30 +22,52 @@ While the mathematical framework of quantum mechanics is well-established and no
 
 Before describing the CHSH game, let's start with a recall of crucial concepts related to the topic. 
 
-`Locality`: an object is influenced directly only by its immediate surroundings. Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
+`Locality`: an object is influenced directly only by its immediate surroundings. 
+Causes must travel through spacetime at the speed of light or slower to affect other energies or objects.
 
-`Realism`: objects which accord with the principle of realism have defined properties independent of our measurements. The universe exists external to our minds and exists whether or not we observe or measure it.
+`Realism`: objects which accord with the principle of realism have defined properties independent of our 
+measurements. The universe exists external to our minds and exists whether or not we observe or measure it.
 
-`Determinism`: the philosophical belief that all events, including moral choices, are determined completely by previously existing causes. In a deterministic system, given a specific set of initial conditions and laws of nature, the outcome can be predicted with certainty.
+`Determinism`: the philosophical belief that all events, including moral choices, are determined completely 
+by previously existing causes. In a deterministic system, given a specific set of initial conditions and 
+laws of nature, the outcome can be predicted with certainty.
 
-`Superdeterminism`: in addition to being deterministic, superdeterministic models also postulate correlations between the state that is measured and the measurement setting.
+`Superdeterminism`: in addition to being deterministic, superdeterministic models also postulate 
+correlations between the state that is measured and the measurement settings. "(...) not just inanimate nature 
+running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose 
+to do one experiment rather than another, absolutely predetermined, including the “decision” by the 
+experimenter to carry out one set of measurements rather than another"~John Bell.
 
-`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes cannot be predicted with certainty, even if the initial conditions are known. Randomness, also known as indeterminism, is the opposite of determinism.
+`Randomness`: refers to the lack of pattern or predictability in events. In a random system, outcomes 
+cannot be predicted with certainty, even if the initial conditions are known. Randomness, also known as 
+indeterminism, is the opposite of determinism.
 
-`Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) or spin-down (|↓⟩).
+`Spin`: Electrons (and many other fundamental particles) possess an intrinsic angular momentum called spin. 
+Spin is a quantum mechanical property, and for electrons, it can have two possible values: spin-up (|↑⟩) 
+or spin-down (|↓⟩).
 
-`Superposition`: A fundamental principle in quantum mechanics is superposition. A particle can exist in multiple states simultaneously.
+`Superposition`: A fundamental principle in quantum mechanics is superposition. A quantum object 
+(for example, a particle) can exist in multiple states simultaneously.
 
-`Entanglement`: Two or more particles can become interconnected in a way that their states are no longer independent. They are said to be entangled.
+`Entanglement`: Two or more particles can become interconnected in a way that their states are no longer 
+independent. They are said to be entangled.
 
-`Two-electron system`: System of two electrons where each electron can be in either the spin-up or spin-down state, resulting in four possible combinations for the system.
+`Two-electron system`: System of two electrons where each electron can be in either the spin-up or spin-down 
+state, resulting in four possible combinations for the system.
 
-`Singlet state`: pair of spin-1/2 particles fulfilling two conditions: 1) whenever the first particle is measured to be spin up on some axis, the other, when measured on THE SAME AXIS, is always found to be spin down;
-2) the prior probabilities for measuring each value of spin (up and down) are equal.
+`Singlet state`: pair of spin-1/2 particles fulfilling two conditions: 1) whenever the first particle is 
+measured to be spin up on some axis, the other, when measured on THE SAME AXIS, is always found to be spin 
+down; 2) the prior probabilities for measuring each value of spin (up and down) are equal.
 
 ### Classical intuition about the topic
 
-Having a singlet state we can easily create a classical image of a case when we measure spins of both particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing to any point of a sphere. The measurement plane is a 2D surface. If a pointer of an arrow is above the surface we did measure a spin up (red color). Otherwise, we did measure a spin down (blue color). Lets visualize a simple case when we measure both particles without any rotation (measurment angles difference = 0 degrees, Figure 1.). The left particle (sphere on the left side of the image) has been measured with spin down (blue). The right particle has been measured with spin up (red).
+Having a singlet state we can easily create a classical image of a case when we measure spins of both 
+particles on the same axis. We can visualize such case on a 3D projection where a spin is an arrow pointing 
+to any point of a sphere. The measurement plane is a 2D surface. If a pointer of an arrow is above the 
+surface we did measure a spin up (red color). Otherwise, we did measure a spin down (blue color). Lets 
+visualize a simple case when we measure both particles without any rotation (measurment angles difference 
+= 0 degrees, Figure 1). The left particle (sphere on the left side of the image) has been measured with 
+a spin down (blue). The right particle has been measured with a spin up (red).
 
 ![alt text](./img/alice_bob_3D_120_50_0.png)
 Figure 1. Classical visualization of singlet state measurements without angle difference. 
@@ -425,7 +459,14 @@ Figure 4. Mandelbrot set visualization.
 
 Since the reality is calculated up front, there is no place for a free-will. The reality is superdeterministic. The following words of John Bell bring the concept of superdeterminism a little closer:
 
-“There is a way to escape the inference of superluminal speeds and spooky action at a distance. But it involves absolute determinism in the universe, the complete absence of free will. Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes clockwork, but with our behavior, including our belief that we are free to choose to do one experiment rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out one set of measurements rather than another, the difficulty disappears. There is no need for a faster than light signal to tell particle A what measurement has been carried out on particle B, because the universe, including particle A, already “knows” what that measurement, and its outcome, will be.”
+“There is a way to escape the inference of superluminal speeds and spooky action at a distance. 
+But it involves absolute determinism in the universe, the complete absence of free will. 
+Suppose the world is super-deterministic, with not just inanimate nature running on behind-the-scenes 
+clockwork, but with our behavior, including our belief that we are free to choose to do one experiment 
+rather than another, absolutely predetermined, including the “decision” by the experimenter to carry out 
+one set of measurements rather than another, the difficulty disappears. There is no need for a faster than 
+light signal to tell particle A what measurement has been carried out on particle B, because the universe, 
+including particle A, already “knows” what that measurement, and its outcome, will be.”
 
 Based on such a superdeterministic interpretation, one can conclude that "the decision maker" in the present is somehow influenced by the decision outcome happening in the future. Superdeterminism includes the concept of total connectivness. To sum up the John Bell words let's recall another quote: 
 
