@@ -475,7 +475,17 @@ Based on such a superdeterministic interpretation, one can conclude that "the de
 
 While interpretations of quantum mechanics vary, experimental evidence continues to challenge our classical understanding of the world. Whether through randomness or determinism, the mysteries of quantum entanglement remain at the forefront of scientific inquiry.
 
-## 5. Bibliography
+## 5. Recommended materials for the research continuation
+
+In the article "Quantum Confusions, Cleared Up (or so I hope)"[6] 
+we can learn how an instrumental approach can be used to investigate some commonly made claims about interpretations of quantum mechanics, 
+especially those that pertain questions of locality.
+
+In the book "The Cellular Automaton Interpretation of Quantum Mechanics"[7] example models are displayed that are classical in essence, 
+but can be analysed by the use of quantum techniques. Author argues that even the Standard Model, together with gravitational interactions, 
+might be viewed as a quantum mechanical approach to analyse a system that could be classical at its core.
+
+## 6. Bibliography
 
 1. "Interpretations of quantum mechanics", wikipedia, https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics
 
@@ -487,19 +497,23 @@ While interpretations of quantum mechanics vary, experimental evidence continues
 
 5. "Did The Future Already Happen? - The Paradox of Time", Kurzgesagt, https://www.youtube.com/watch?v=wwSzpaTHyS8
 
+6. "Quantum Confusions, Cleared Up (or so I hope)", Sabine Hossenfelder, https://arxiv.org/pdf/2309.12299
+
+7. "The Cellular Automaton Interpretation of Quantum Mechanics", Gerard't Hooft, https://arxiv.org/pdf/1405.1548
+
 Other related materials:
 
-6. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
+8. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
 
-7. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
+9. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
 
-8. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
+10. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
 
-9. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
+11. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
 
-10. "Pilot Wave Theory and Quantum Realism", PBS Space Time
+12. "Pilot Wave Theory and Quantum Realism", PBS Space Time
 , https://www.youtube.com/watch?v=RlXdsyctD50
 
-11. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
+13. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
 
-12. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
+14. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
