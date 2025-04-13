@@ -1,4 +1,4 @@
-# Demystifying Quantum Mechanics: Beyond Randomness and Towards Determinism
+# The Theory of Fundamentally Deterministic Universe
 
 ## 1. Abstract
 
@@ -450,9 +450,11 @@ P(same spin) = sin²(θ/2)
 
 ## 4. Beyond Randomness and Towards Determinism
 
-Experiments force us to reject either locality or realism (or both ... that will be crazy!). Just to recal, the most accepted interpretation is based on fundamental randomness. Are there any interpretations saving realism and at the same time rejecting fundamental randomness? The promising candidate is de Broglie–Bohm theory. The theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. It even more complicated the calculations. But should we accept the limits coming from the quantum world and just agree with a fundamental randomness? This opens a philosophical debate on whether we should seek deterministic alternatives to the widely accepted probabilistic framework of quantum mechanics.
+Experiments force us to reject either locality or realism (or both ... that will be crazy!). Just to recal, the most accepted interpretation is based on fundamental randomness. Are there any interpretations saving realism and at the same time rejecting fundamental randomness? The promising candidate is de Broglie–Bohm theory. The theory does not introduce any novelty that can explain experiments better than the widely accepted QM equations do. Moreover, it complicates the calculations. But should we accept the limits coming from the quantum world and just agree with a fundamental randomness? This opens a philosophical debate on whether we should seek deterministic alternatives to the widely accepted probabilistic framework of quantum mechanics.
 
-Assuming the determinism, our physical world is kind of a simulation and could be a Mandelbrot set like simulation (Figure 4), but with more dimensions and different equation(s). It has a relatively simple definition that exhibits great complexity, especially as it is magnified. Due to the results of quantum experiments the set seems to be calculated up front[5]. Such interpretation allows the present to be determined not only by the past, but by the future as well. The interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not that easy, but maybe some day).
+Assuming the determinism, our physical world is kind of a simulation and could be a Mandelbrot set like simulation (Figure 4), but with more dimensions (at least 4, 3D space + time) and a different set of equations. "The Theory of Fundamentally Deterministic Universe" fits to the set of theories called Fractal cosmology[5]. Mandelbrot set is a fractal and has a relatively simple definition that exhibits great complexity, especially as it is magnified. It implies that all other theories are secondary and they cannot desribe patterns appearing on each scale of maginitude (for example, General relativity describe patterns at some scale pretty well, but does not explain Dark Matter fenomenum).
+
+Due to the results of quantum experiments the set seems to be calculated up front[6]. Such interpretation allows the present to be determined not only by the past, but by the future as well. The interpretation is pretty close to the de Broglie–Bohm theory. All has been left is to just spit out some math on the table (not that easy, but maybe some day).
 
 ![alt text](./img/mandelbrot.jpg)
 Figure 4. Mandelbrot set visualization.
@@ -477,13 +479,16 @@ While interpretations of quantum mechanics vary, experimental evidence continues
 
 ## 5. Recommended materials for the research continuation
 
-In the article "Quantum Confusions, Cleared Up (or so I hope)"[6] 
+In the article "Quantum Confusions, Cleared Up (or so I hope)"[7] 
 we can learn how an instrumental approach can be used to investigate some commonly made claims about interpretations of quantum mechanics, 
 especially those that pertain questions of locality.
 
-In the book "The Cellular Automaton Interpretation of Quantum Mechanics"[7] example models are displayed that are classical in essence, 
+In the book "The Cellular Automaton Interpretation of Quantum Mechanics"[8] example models are displayed that are classical in essence, 
 but can be analysed by the use of quantum techniques. Author argues that even the Standard Model, together with gravitational interactions, 
 might be viewed as a quantum mechanical approach to analyse a system that could be classical at its core.
+
+In the article "A Toy Model for Local and Deterministic Wave-function Collapse"[9] a local, deterministic toy model for quantum mechanics is introduced and discussed. 
+It is demonstrated that, when averaged over the hidden variables, the model produces the same predictions as quantum mechanics.
 
 ## 6. Bibliography
 
@@ -495,25 +500,29 @@ might be viewed as a quantum mechanical approach to analyse a system that could 
 
 4. "Bell's theorem", John Stewart Bell, 1964,  https://en.wikipedia.org/wiki/Bell%27s_theorem
 
-5. "Did The Future Already Happen? - The Paradox of Time", Kurzgesagt, https://www.youtube.com/watch?v=wwSzpaTHyS8
+5. "Fractal cosmology", wikipedia.org, https://en.wikipedia.org/wiki/Fractal_cosmology
 
-6. "Quantum Confusions, Cleared Up (or so I hope)", Sabine Hossenfelder, https://arxiv.org/pdf/2309.12299
+6. "Did The Future Already Happen? - The Paradox of Time", Kurzgesagt, https://www.youtube.com/watch?v=wwSzpaTHyS8
 
-7. "The Cellular Automaton Interpretation of Quantum Mechanics", Gerard't Hooft, https://arxiv.org/pdf/1405.1548
+7. "Quantum Confusions, Cleared Up (or so I hope)", Sabine Hossenfelder, https://arxiv.org/pdf/2309.12299
+
+8. "The Cellular Automaton Interpretation of Quantum Mechanics", Gerard't Hooft, https://arxiv.org/pdf/1405.1548
+
+9. "A Toy Model for Local and Deterministic Wave-function Collapse", Sandro Donadi, Sabine Hossenfelder, https://arxiv.org/abs/2010.01327
 
 Other related materials:
 
-8. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
+10. "Einstein–Podolsky–Rosen paradox", 1935, https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox
 
-9. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
+11. "Experimental Test of Local Hidden-Variable Theories", Stuart J. Freedman and John F. Clauser, https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.28.938
 
-10. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
+12. "Testing Superdeterministic Conspiracy", Sabine Hossenfelder, https://www.youtube.com/watch?v=cbSc-PLGU8o
 
-11. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
+13. "On the Impossible Pilot Wave", John Stewart Bell, https://cds.cern.ch/record/138187/files/198207191.pdf
 
-12. "Pilot Wave Theory and Quantum Realism", PBS Space Time
+14. "Pilot Wave Theory and Quantum Realism", PBS Space Time
 , https://www.youtube.com/watch?v=RlXdsyctD50
 
-13. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
+15. "Is This What Quantum Mechanics Looks Like?", Veritasium, https://www.youtube.com/watch?v=WIyTZDHuarQ
 
-14. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
+16. "David Bohm's Pilot Wave Interpretation of Quantum Mechanics", Sabine Hossenfelder, https://www.youtube.com/watch?v=ix9nJmz4mGg
